@@ -11,10 +11,8 @@
  */
 function updateText() {
 	// CODE GOES HERE
-	setTimeout(() => {
-		let text = document.getElementById("text-input").value;
-		document.getElementById("text-output").innerText = text;
-	}, 1);
+	let text = document.getElementById("text-input").value;
+	document.getElementById("text-output").innerText = text;
 }
 /**
  * Toggle the bold class for the output text
@@ -61,10 +59,10 @@ function makeUnderline(elem) {
  */
 function alignText(elem, alignType) {
 	// CODE GOES HERE
-        document.getElementById("text-output").style.textAlign = alignType;
-        let buttonsList = document.getElementsByClassName('align');
-        for (let i = 0; i < buttonsList.length; i++){
-            buttonsList[i].classList.remove('active');
-        }
-        elem.classList.add('active');
+	document.getElementById("text-output").style.textAlign = alignType;
+	let buttonsList = document.getElementsByClassName("align");
+	for (let i = 0; i < buttonsList.length; i++) {
+		buttonsList[i].classList.remove("active");
 	}
+	elem.classList.add("active");
+}
